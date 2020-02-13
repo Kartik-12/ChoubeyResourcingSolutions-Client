@@ -1,0 +1,195 @@
+<!--Carousel-->
+
+    <ngb-carousel>
+        <ng-template ngbSlide>
+          <div class="picsum-img-wrapper">
+            <img src="/assets/img/1641179.jpg" alt="Random first slide">
+          </div>
+          <div class="carousel-caption">
+            <h3>First slide label</h3>
+            <p>We can add one picture.</p>
+          </div>
+        </ng-template>
+        <!-- <ng-template ngbSlide>
+          <div class="picsum-img-wrapper">
+            <img src="/assets/img/CRS Logo1.png" alt="Random second slide">
+          </div>
+          <div class="carousel-caption">
+            <h3>Second slide label</h3>
+            <p>We can add one picture.</p>
+          </div>
+        </ng-template> -->
+        <!-- <ng-template ngbSlide>
+          <div class="picsum-img-wrapper">
+            <img src="/assets/img/CRS Logo1.png" alt="Random third slide">
+          </div>
+          <div class="carousel-caption">
+            <h3>Third slide label</h3>
+            <p>We can add one picture.</p>
+          </div>
+        </ng-template> -->
+      </ngb-carousel>
+
+<!--Carousel ends-->
+
+
+
+
+
+<!-- cards --> 
+<div class="container" style="max-width: 100%;">
+<div class="row" style="margin-top: 40px; margin-left: 150px;">
+    <div class="col-lg-3" >
+        <mat-card class="example-card" style="background-color:rgb(12, 60, 96) ; color: rgb(250, 250, 250);">
+            <mat-card-header>    
+              <mat-card-title >Services</mat-card-title>      
+            </mat-card-header>    
+            <mat-card-content>
+              <p>
+                I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font. I’m a great place for you to tell a story and let your users know a little more about you.
+              </p>
+            </mat-card-content> 
+            <mat-card-actions>
+                <button mat-raised-button style="size: 90px;">More Info</button>        
+              </mat-card-actions>
+          </mat-card>
+    </div>
+    <div class="col-lg-3" style="margin-left: 50px;">
+        <mat-card class="example-card" style="background-color:rgb(12, 60, 96) ; color: rgb(250, 250, 250);">
+            <mat-card-header>    
+              <mat-card-title>Services</mat-card-title>      
+            </mat-card-header>    
+            <mat-card-content>
+              <p>
+                I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font. I’m a great place for you to tell a story and let your users know a little more about you.
+              </p>
+            </mat-card-content> 
+            <mat-card-actions>
+                <button mat-raised-button style="size: 90px;">More Info</button>        
+              </mat-card-actions>
+          </mat-card>
+    </div>
+    <div class="col-lg-3" style="margin-left: 50px;">
+        <mat-card class="example-card" style="background-color:rgb(12, 60, 96) ; color: rgb(250, 250, 250);">
+            <mat-card-header>    
+              <mat-card-title>Services</mat-card-title>      
+            </mat-card-header>    
+            <mat-card-content>
+              <p>
+                I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font. I’m a great place for you to tell a story and let your users know a little more about you.
+              </p>
+            </mat-card-content> 
+            <mat-card-actions>
+                <button mat-raised-button style="size: 90px;">More Info</button>        
+              </mat-card-actions>
+          </mat-card>
+    </div>
+
+</div>
+</div>
+
+<!--cards ends-->
+
+<!--About us-->
+
+<div class="container" style="background-color: rgb(209,224,235); margin-top: 30px; height:auto; max-width:100%;" >
+    <div class="row">
+        <div class="col-lg" style="margin-top: 40px;">
+            <h1 style=" text-align: center; color:rgb(12, 60, 96); font-size: 70px;">ABOUT US</h1>  
+            </div>
+    </div>
+    <br>
+    <br>
+    <div class="row">
+        <div class="col-lg" style="max-width:50%; margin: auto;">
+            <p style=" text-align: center; color:rgb(12, 60, 96);">
+                I'm a paragraph. Click here to add your own text and edit me. It’s easy. 
+                Just click “Edit Text” or double click me to add your own content and make changes to the font. 
+                Feel free to drag and drop me anywhere you like on your page. 
+                I’m a great place for you to tell a story and let your users know a little more about you.
+            </p>  
+            <p style="text-align: center; color:rgb(12, 60, 96);">
+                This is a great space to write long text about your company and your services.
+                 You can use this space to go into a little more detail about your company. 
+                 Talk about your team and what services you provide.
+                 Tell your visitors the story of how you came up with the idea for your business and what makes you different from your competitors. 
+            </p>
+            </div>
+    </div>
+</div>
+<!--About us ends-->
+
+<!--Contact us-->
+<div class="container" style="max-width: 100%; background-color: rgb(12, 60, 96); height: auto; color: whitesmoke; text-align: center;">
+    <br>
+    <div>
+        <h2>CONTACT US</h2>
+    </div>
+    <br>
+<div>       
+    <form [formGroup]="contactForm">   
+        
+            <p style="color: black; font-size: 40px; ">WE ARE HIRING!!!</p>
+              
+          
+    <p>
+        <mat-form-field appearance="legacy" >
+          <mat-label>Choose Relevant Job Opening</mat-label>
+          <mat-select formControlName="jobOpening">
+            <mat-option *ngFor="let jobOpening of jobOpenings" [value]="jobOpening">
+              {{jobOpening}}
+            </mat-option>
+          </mat-select>       
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field appearance="legacy">
+          <mat-label>What's your employment status?</mat-label>
+          <mat-select formControlName="empStatus">
+            <mat-option *ngFor="let empStatus of empStatuses" [value]="empStatus">
+              {{empStatus}}
+            </mat-option>
+          </mat-select> 
+          </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field appearance="legacy">
+          <mat-label>Do you have previous experience?</mat-label>
+          <mat-select formControlName="experience">
+            <mat-option *ngFor="let experience of expe" [value]="experience">
+              {{experience}}
+            </mat-option>
+          </mat-select>          
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field appearance="legacy">
+          <mat-label>First Name</mat-label>
+          <input matInput placeholder="First Name" formControlName="firstName">
+       </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field appearance="legacy">
+          <mat-label>Last Name</mat-label>
+          <input matInput placeholder="Last Name" formControlName="lastName">
+       </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field appearance="legacy">
+          <mat-label>email</mat-label>
+          <input matInput placeholder="Email" formControlName="email">
+       </mat-form-field>
+      </p>
+      <p>
+        <button mat-raised-button color="primary" (click)="onSubmit()" style="width: 90px;">Submit</button>       
+      </p>
+      <br>
+    </form>
+   
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+</div>

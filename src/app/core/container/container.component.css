@@ -1,0 +1,30 @@
+.example-card {
+    max-width: 400px;
+  }
+  
+  .example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+  }
+
+  mat-form-field {
+    width: 70%;
+    color: black;
+    
+  }
+  form{
+    background-color: #f0e2cd;
+    width: 50%;
+    margin: auto;
+  }
+  .mat-card-actions{
+      text-align: center;
+  }
+  ngb-carousel {
+      width: 100%;    
+    margin: 50px auto;
+}
+ngb-carousel img {
+    width: 100%;
+    outline: none;
+}

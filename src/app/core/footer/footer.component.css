@@ -1,0 +1,15 @@
+p{
+    
+    
+    height: 10%;  
+    
+   
+}
+#foot{
+    background-color:#0c3c60 ;
+    width: 100%;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    z-index: 20;
+}
